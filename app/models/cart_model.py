@@ -1,15 +1,8 @@
 
 
 from dataclasses import dataclass
-from datetime import datetime
-from pydantic import Json
 from app.schemas.cart_schema import CartSchema
 from app.sql_query.Query import Query
-
-@dataclass
-class Cart():
-  pass
-
 
 """
 For testing purpose this class not implementing a real database connection, but only return fake_db_data

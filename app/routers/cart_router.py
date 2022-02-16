@@ -1,4 +1,3 @@
-from unittest import result
 from fastapi import APIRouter
 from app.dto.cart_dto import CartSchemaDto
 from app.dto.item_dto import ItemSchemaDto
