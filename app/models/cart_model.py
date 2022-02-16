@@ -35,8 +35,7 @@ class CartModel():
   def CheckoutCart(self,customer_id:int):
     #Set the cart date_checkout to the current datetime and return the final price for the cart
     #{......}
-    #Rerun fake_db_data
-    return customer_id
+    return "The cart delivery_date was updated for customer "+str(customer_id)
 
   def InsertItem(self,input: CartSchema):
     #Insert the input items into the customer cart
