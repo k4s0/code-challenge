@@ -30,6 +30,7 @@ Example request body :
 
 ### Add Items to Cart
 ```[POST] http://127.0.0.1:8000/cart/add/```
+
 Example request body :
 {
   "ecommerce_id": 1,
@@ -61,14 +62,17 @@ Example request body :
     }
   ]
 }
+
 **What have I done?**
 As you can see inside the `CartService` class, when I insert the `Items` I have decided to apply the price policies that increase its price, i.e. the `mime_type` and the `delivery_date`, considering the fixed price of 1.0
+
 **A doubt**
 >The `file_type` as a string value indicating the file's MIME type
 
 If you head over to IANA, which holds all the official MIME types, you’ll notice that Adobe Illustrator is not even mentioned. So i decided into the ItemDTO class to insert the file extension control instead the mime_type, to be consistent with pricing policies 
 ```__allowed_mime = ["application/pdf","image/vnd.adobe.photoshop"]```
 ```__allowed_ext = ["pdf","psd","ai"]```
+
 ### View a Cart
 
 ```[GET] http://127.0.0.1:8000/cart/1```
